@@ -24,14 +24,8 @@ A web application for teams to collaborate and complete projects.
 
 ## Project Workflow
 1. Home
-   1. Notifications
-   2. Deadlines
 2. Tasks
-   1. Assigned Tasks
-   2. Completed Tasks
 3. Projects
-   1. Current Projects
-   2. Finished Projects
 
 ## TechStack
 ### Front-End
@@ -45,5 +39,5 @@ A web application for teams to collaborate and complete projects.
 
 ## Future
 1. Network
-2. Real-Time
+2. Real-Time chat
 
