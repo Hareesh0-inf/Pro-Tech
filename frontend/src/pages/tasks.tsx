@@ -20,13 +20,13 @@ export default function Tasks() {
     }, []);
 
     return (
-        <div className="form-container">
-            <h1>Tasks</h1>
+        <div className="task-container">
+            <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>Tasks</h1>
             <ul>
                 {tasks.map(task => (
-                    <li key={task.id}>
-                        <h2>{task.title}</h2>
-                        <p>Status: {task.status}</p>
+                    <li className="task flex-col" key={task.id}>
+                        <h2 className="relative text-left">{task.title}</h2>
+                        <p className="relative text-left">Status: {task.status}</p>
                     </li>
                 ))}
             </ul>
