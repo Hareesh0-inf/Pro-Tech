@@ -9,16 +9,16 @@ import Tasks from './pages/tasks';
 
 function App() {
   return (
-    <Router>
+    <Router className="top">
       <div className="App">
         <nav>
-          <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/login">Login</Link></li>
-            <li><Link to="/register">Register</Link></li>
-            <li><Link to="/projects">Projects</Link></li>
-            <li><Link to="/tasks">Tasks</Link></li>
+          <ul className='flex flex-row'>
+            <li className="ml-10 h-max"><Link to="/">Home</Link></li>
+            <li className="ml-10 h-max"><Link to="/about">About</Link></li>
+            <li className="ml-10 h-max"><Link to="/login">Login</Link></li>
+            <li className="ml-10 h-max"><Link to="/register">Register</Link></li>
+            <li className="ml-10 h-max"><Link to="/projects">Projects</Link></li>
+            <li className="ml-10 h-max"><Link to="/tasks">Tasks</Link></li>
           </ul>
         </nav>
         <Routes>
