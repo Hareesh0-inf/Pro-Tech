@@ -17,3 +17,6 @@
 
 ## 4. Notifications
 - Alerts for task updates, doubt responses, and deadline reminders.
+
+:::image type="content" source="assets/IMG20250215090736.jpg" alt-text="pages":::
+:::image type="content" source="assets/IMG20250215090747.jpg" alt-text="pages":::
