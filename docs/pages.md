@@ -6,7 +6,7 @@
 
 ## 2. Tasks
 - List of tasks assigned to the user.
-- Task status updates: **Pending, In Progress, Completed**.
+- Task status updates: **In Progress, Completed**.
 - Ability to ask and answer doubts in Discussions.
 
 ## 3. Projects
