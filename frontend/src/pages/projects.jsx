@@ -14,12 +14,14 @@ export default function Projects() {
             <ul>
                 {projects.map((project) => (
                     <li className="project w-screen flex flex-row text-left" key={project.id} style={{ marginBottom: "1rem" }}>
-                        <div className="flex-col"> 
-                        <h2>{project.name}</h2>
-                        <p>Tasks: {project.tasks}</p>
-                        <p>Completed: {project.completed}</p>
+                        <div className="flex-col w-[30%] h-2 -mt-1"> 
+                        <h2 className="text-2xl font-semibold text-blue-900" >{project.name}</h2>
+                        <div className="flex flex-row">
+                        <p>Tasks</p>
+                        <p className="ml-1">{project.completed}/{project.tasks}</p>
                         </div>
-                        <div className="ml-[70%] flex-row p-3">
+                        </div>
+                        <div className="ml-[70%] flex-row p-1">
                         <button className="right-0 w-30">details</button>
                         </div>
                         
