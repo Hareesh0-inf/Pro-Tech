@@ -5,14 +5,8 @@ export default function Register() {
     const [password, setPassword] = useState("");
     const [confirmPassword, setConfirmPassword] = useState("");
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (password !== confirmPassword) {
-            alert("Passwords do not match!");
-            return;
-        }
-        console.log("Email:", email);
-        console.log("Password:", password);
+    const handleHomeRedirect = () => {
+        window.location.href = "/home";
     };
 
     return (
@@ -27,27 +21,27 @@ export default function Register() {
                     </div>
                     <div className="flex flex-col">
                         <input
-                            className="mb-4 bg-amber-50 border rounded-md"
-                            type="email"
+                            className="mb-4 bg-amber-50 border rounded-md text-black"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
                             required
                         />
                         <input
-                            className="mb-4 bg-amber-50 border rounded-md"
+                            className="mb-4 bg-amber-50 border rounded-md text-black"
                             type="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
                             required
                         />
                         <input
-                            className="mb-4 bg-amber-50 border rounded-md"
+                            className="mb-4 bg-amber-50 border rounded-md text-black"
                             type="password"
                             value={confirmPassword}
                             onChange={(e) => setConfirmPassword(e.target.value)}
                             required
                         />
-                        <button type="submit" className="rounded-md">Register</button>
+                        <button type="submit" onClick={handleHomeRedirect}  className="rounded-md">Register</button>
+                        <a href="/login" className="text-cyan-400 -ml-10">Already have an account? Login</a>
                     </div>
                 </form>
             </div>

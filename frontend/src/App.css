@@ -55,3 +55,7 @@ background: linear-gradient(115deg, rgba(77,76,76,1) 0%, rgba(150,148,152,1) 77%
 .project:hover {
   transform: scale(1.02);
 }
+
+.overview{
+  background-color: #adadad1b;
+}
