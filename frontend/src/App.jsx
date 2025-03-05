@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link, Navigate, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Navigate, NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './App.css';
 import Home from './pages/home';
@@ -7,20 +7,19 @@ import Login from './pages/login';
 import Register from './pages/register';
 import Projects from './pages/projects';
 import Tasks from './pages/tasks';
+import { isLoggedIn } from './auth/authService';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(isLoggedIn());
 
   useEffect(() => {
-    // Check if the user is logged in (e.g., check local storage or an API)
-    const loggedIn = localStorage.getItem('isLoggedIn') === 'true';
-    setIsLoggedIn(loggedIn);
+    setLoggedIn(isLoggedIn());
   }, []);
 
   return (
     <Router>
       <div className="App">
-        {isLoggedIn ? (
+        {loggedIn ? (
           <>
             <nav className='-mt-8 bg-rose-500 h-7 w-screen -ml-8'>
               <ul className='flex flex-row'>
@@ -40,12 +39,12 @@ function App() {
           </>
         ) : (
           <Routes>
-            <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
+            <Route path="/login" element={<Login setIsLoggedIn={setLoggedIn} />} />
             <Route path="/register" element={<Register />} />
             <Route path="*" element={<Navigate to="/login" />} />
           </Routes>
         )}
-        {!isLoggedIn && <Navigate to="/login" />}
+        {!loggedIn && <Navigate to="/login" />}
       </div>
     </Router>
   );

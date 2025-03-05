@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
     return (
-        <div className="about-container h-screen" style={{ fontFamily: 'Arial, sans-serif', lineHeight: '1.6', color: '#333', padding: '20px', backgroundColor: '#f9f9f9' }}>
+        <div className="about-container h-screen" style={{ fontFamily: 'Arial, sans-serif', lineHeight: '1.6', color: '#333', padding: '20px', backgroundColor: '#b99dea' }}>
             <h1 style={{ color: '#2c3e50', marginTop: 5}}>About Pro-Tech</h1>
             <p>Pro-Tech is a web application designed for teams to efficiently manage projects, assign tasks, track progress, and communicate.</p>
             
